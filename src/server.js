@@ -21,8 +21,8 @@ app.get("*", (req, res) => {
   const initialData = { page };
   const result = html
     .replace(`<div id="root"></div>`, `<div id="root">${renderString}</div>`)
-    .replace("__DATA_FROM_SERVER__", JSON.stringify(initialData));
-  // .replace("__STYLE_FROM_SERVER__", styles);
+    .replace("__DATA_FROM_SERVER__", JSON.stringify(initialData))
+    .replace("__STYLE_FROM_SERVER__", styles);
   res.send(result);
 });
 

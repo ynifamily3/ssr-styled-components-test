@@ -48,7 +48,7 @@ function getConfig(isServer) {
     plugins: isServer
       ? [new CleanWebpackPlugin()]
       : [new HtmlWebpackPlugin({ template: "./template/index.html" })],
-    mode: "development",
+    mode: "production",
   };
 }
 
